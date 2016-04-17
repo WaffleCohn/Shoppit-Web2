@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shoppit | sign up</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="signup.css" />
+
+        <script type="text/javascript" src="signup.js"></script>
+    </head>
+
+    <body>
+        <div id="main">
+            <a href="index.html">
+                <img src="logo_white.png" id="logo" />
+            </a>
+            <p id="message">Join shoppit today!</p>
+
+            <form id="login-form">
+                <div id="step1">
+                    <p class="login-head">Email address</p>
+                    <p><input type="email" name="email" placeholder="email@provider.com" /></p>
+
+                    <p class="login-head">Password</p>
+                    <p><input type="password" name="password" placeholder="password" /></p>
+
+                    <p class="login-head">Confirm Password</p>
+                    <p><input type="password" name="confirm-password" placeholder="confirm password" /></p>
+                </div>
+
+                <div id="step2">
+                    <p class="login-head">First and Last Name</p>
+                    <p><input type="text" name="first-name" class="halfInput" placeholder="first" /><input type="text" name="last-name" class="halfInput2" placeholder="last" /></p>
+
+                    <p class="login-head">Address</p>
+                    <p><input type="text" name="street" placeholder="street" /></p>
+                    <p><input type="text" name="city" class="halfInput" placeholder="city" /><input type="text" name="state" class="halfInput2" placeholder="state" /></p>
+                </div>
+
+                <div id="step3">
+                    <p class="login-head">Credit Card Number</p>
+                    <p><input type="password" name="credit-card" placeholder="credit card" onkeypress="return onlyNums(event, this);" /></p>
+
+                    <p class="login-head">Expiration Date</p>
+                    <p><input type="text" name="expiration-date" class="short" placeholder="mm" onkeypress="return onlyNums(event, this, 2);" />/<input type="text" name="text" class="short2" placeholder="yy" onkeypress="return onlyNums(event, this, 2);" /></p>
+
+                    <p class="login-head">Security PIN</p>
+                    <p><input type="password" name="security-pin" placeholder="security pin" onkeypress="return onlyNums(event, this);" /></p>
+                </div>
+
+                <div id="step4">
+                    <p class-"login-head">Profile Picture (Optional)</p>
+                    <p><input type="file" accept="image/*" class="upload" /></p>
+
+                    <p class-"login-head">About You (Optional)</p>
+                    <p><textarea name="description" placeholder="describe yourself" class="multi-line" rows="5"></textarea></p>
+                </div>
+
+                <div id="nav-buttons">
+                    <span class="nav-button disabled" id="previous" onclick="previous(this);">Previous</span>
+                    <span class="nav-button" id="next" onclick="nextt(this);">Next</span>
+                </div>
+
+                <p><input type="submit" value="Sign Up" id="submit-button" /></p>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+
+            function onlyNums(e, obj, max)
+			{
+				var charCode = e ? e.charCode : event.charCode;
+
+                if (max)
+                    if (obj.value.length >= max)
+                        return false;
+
+				return charCode >= 48 && charCode <= 57
+			}
+        </script>
+    </body>
+</html>

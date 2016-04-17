@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My shoppit</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="shopping.css" />
+
+        <script type="text/javascript" src="shopping.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="logo_white.png" id="logo" />
+            </a>
+
+            <div id="right-links">
+                <a href="index.html">Logout</a>
+            </div>
+        </header>
+
+        <section name="header">
+            <img src="blank_profile.png" id="profile-pic" />
+            <p id="name">Jiaming "Fungus" Chen</p>
+        </section>
+
+        <section name="about">
+            <div id="about-content">
+                <h3 id="about-head">About</h3>
+                <p id="description">No description available</p>
+            </div>
+        </section>
+
+        <section name="list">
+            <!--<form id="list-form">
+                <p id="search-container"><input type="text" name="search" /></p>
+                <div id="search-results">
+                    <div class="item">
+                        <p>Apple</p>
+                    </div>
+                    <div class="item">
+                        <p>Orange</p>
+                    </div>
+                    <div class="item">
+                        <p>Box of Chocolate Rabbits</p>
+                    </div>
+                    <div class="item">
+                        <p>Fungus</p>
+                    </div>
+                </div>
+            </form>-->
+
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-1">
+                    <h3 id="list-header">Add Items</h3>
+
+                    <form id="search-form">
+                        <p id="search-container">
+                            <input type="text" name="search" placeholder="search..." />
+                            <button>Search</button>
+                        </p>
+
+                        <div class="line"></div>
+
+                        <div id="search-results">
+                            <div class="item" onclick="add(this);">
+                                <p>Strawberries</p>
+                            </div>
+                            <div class="item" onclick="add(this);">
+                                <p>Bananas</p>
+                            </div>
+                            <div class="item" onclick="add(this);">
+                                <p>iPhone</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-6">
+                    <div id="list-container">
+                        <h3 id="list-header">My Grocery List</h3>
+
+                        <div id="list">
+                            <div class="list-item" onclick="toggleOptions(this);">
+                                <p class="list-item-name">
+                                    <span class="name-word">Fungus</span>
+                                    <i class="fa fa-clock-o symbol" aria-hidden="true"></i>
+                                </p>
+                                <p class="list-item-quantity">Quantity: 5</p>
+                            </div>
+                            <div class="list-detail">
+                                <p class="change-quantity-container">
+                                    New Quantity:&nbsp;
+                                    <input type="text" name="quantity" onkeypress="return onlyNums(event, this)" size="10" />
+                                    <button class="update-button">Update</button>
+                                    <button class="update-button" onclick="closeDetail(this.parentElement.parentElement);">Cancel</button>
+                                    <button class="delete-button">Delete</button>
+                                </p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">
+                                    <span class="name-word">Gummy Bears</span>
+                                    <i class="fa fa-car symbol" aria-hidden="true"></i>
+                                </p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Chicken</p>
+                                <p class="list-item-quantity">Quantity: 10</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Apartment Building</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Birthday Cake</p>
+                                <p class="list-item-quantity">Quantity: 2</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Pants</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Chocolate Bars</p>
+                                <p class="list-item-quantity">Quantity: 100</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Gum</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Friends</p>
+                                <p class="list-item-quantity">Quantity: 0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="quantity-alert-container">
+            <div id="quantity-alert">
+                <p>How many would you like?</p>
+                <p><input type="text" name="quantity" onkeypress="return onlyNums(event, this);" /></p>
+                <p>
+                    <button class="alert-button cancel-button" onclick="cancel()">Cancel</button>
+                    <button class="alert-button add-button" onclick="addItem()">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var list = document.getElementById("list"),
+                search = document.getElementById("search-form");
+
+            search.style.height = list.offsetHeight + "px";
+
+            function onlyNums(e, obj)
+			{
+				var charCode = e ? e.charCode : event.charCode;
+
+                if (obj.value.length > 3)
+                    return false;
+
+				return charCode >= 48 && charCode <= 57
+			}
+        </script>
+    </body>
+</html>
