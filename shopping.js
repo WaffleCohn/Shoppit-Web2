@@ -29,3 +29,19 @@ function addItem()
 
     input.value = "";
 }
+
+function toggleOptions(obj)
+{
+    var detail = obj.nextElementSibling;
+
+    if (detail.style.display == "none" || detail.style.display == "" || detail.style.display == null)
+        detail.style.display = "block";
+    else
+        detail.style.display = "none";
+}
+
+function closeDetail(obj)
+{
+    obj.style.display = "none";
+    obj.getElementsByTagName("input")[0].value = "";
+}

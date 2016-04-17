@@ -256,6 +256,56 @@ section[name="list"] {
     line-height: 40px;
 }
 
+.list-detail {
+    color: white;
+    padding: 20px;
+    padding-bottom: 0px;
+    background: #AEAEAE;
+    font-size: 18px;
+    height: 80px;
+    display: none;
+    margin-top: -10px;
+}
+
+.list-detail input {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.update-button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.update-button:hover {
+    background: white;
+    color: #AEAEAE;
+}
+
+.delete-button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.delete-button:hover {
+    background: #e53935;
+    color: white;
+    border-color: #e53935;
+}
+
 #quantity-alert-container {
     position: fixed;
     width: 100%;

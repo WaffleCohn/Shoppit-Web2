@@ -82,12 +82,21 @@
                         <h3 id="list-header">My Grocery List</h3>
 
                         <div id="list">
-                            <div class="list-item">
+                            <div class="list-item" onclick="toggleOptions(this);">
                                 <p class="list-item-name">
                                     <span class="name-word">Fungus</span>
                                     <i class="fa fa-clock-o symbol" aria-hidden="true"></i>
                                 </p>
                                 <p class="list-item-quantity">Quantity: 5</p>
+                            </div>
+                            <div class="list-detail">
+                                <p class="change-quantity-container">
+                                    New Quantity:&nbsp;
+                                    <input type="text" name="quantity" onkeypress="return onlyNums(event, this)" size="10" />
+                                    <button class="update-button">Update</button>
+                                    <button class="update-button" onclick="closeDetail(this.parentElement.parentElement);">Cancel</button>
+                                    <button class="delete-button">Delete</button>
+                                </p>
                             </div>
                             <div class="list-item">
                                 <p class="list-item-name">
