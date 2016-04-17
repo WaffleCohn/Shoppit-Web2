@@ -86,7 +86,8 @@ section[name="about"] {
 
 section[name="list"] {
     background: #009688;
-    height: 1000px;
+    //height: 100%;
+    padding-bottom: 100px;
 }
 
 #list-form {
