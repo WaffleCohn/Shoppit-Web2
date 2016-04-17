@@ -17,7 +17,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
-        fields = ('name','description','iam_id')
+        fields = ('name','description','iam_id','owner','lat','lon','quantity')
 
 class TransactionSerializer(serializers.ModelSerializer):
     items = ItemSerializer(many=True, read_only=True)

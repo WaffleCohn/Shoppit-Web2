@@ -18,13 +18,16 @@ class Item(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(default="", max_length=200)
     iam_id = models.IntegerField(default=0)
-    owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=False)
+    quantity = models.IntegerField(default=1)
+    lat = models.FloatField(default=0)
+    lon = models.FloatField(default=0)
 
 class Transaction(models.Model):
     value = models.DecimalField(default=1,max_digits=100,decimal_places=10)
     items = models.ManyToManyField(Item)
-    seller = models.ForeignKey(Profile, related_name='+', on_delete=models.CASCADE)
-    buyer = models.ForeignKey(Profile, related_name='+', on_delete=models.CASCADE)
+    seller = models.ForeignKey(Profile, related_name='+', on_delete=models.CASCADE, blank=False)
+    buyer = models.ForeignKey(Profile, related_name='+', on_delete=models.CASCADE, blank=False)
     datetime = models.DateTimeField(auto_now_add=True)
 
 # @static_method
