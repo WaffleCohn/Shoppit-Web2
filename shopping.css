@@ -95,28 +95,36 @@ section[name="list"] {
 }
 
 #search-form {
-    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    height: 100%;
+    height: 500px
 }
 
 #search-container {
     margin-bottom: 0px;
+    padding: 20px;
 }
 
 #search-container input {
     width: 70%;
     height: 40px;
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
+    position: absolute;
+    left: 5%;
 }
 
 #search-container button {
-    color: white;
-    border: 2px solid white;
+    color: black;
+    border: 2px solid black;
     border-radius: 5px;
     background: transparent;
     position: absolute;
     height: 40px;
-    left: 71%;
+    left: 76%;
     padding-left: 10px;
     padding-right: 10px;
     transition: all 0.3s ease 0s;
@@ -124,8 +132,35 @@ section[name="list"] {
 }
 
 #search-container button:hover {
-    color: #009688;
-    background: white;
+    color: white;
+    background: #009688;
+    border-color: transparent;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background: #009688;
+    position: relative;
+    top: 40px;
+}
+
+#search-results {
+    position: relative;
+    top: 60px;
+    overflow-y: scroll;
+}
+
+.item {
+    width: 100%;
+    font-size: 24px;
+    color: black;
+    padding: 20px;
+}
+
+.item:hover {
+    background: #E0E0E0;
+    cursor: pointer;
 }
 
 /*
@@ -170,11 +205,10 @@ section[name="list"] {
 
 #list {
     position: relative;
-    width: 80%;
-    left: 10%;
+    width: 100%;
     background: white;
     border-radius: 5px;
-    height: 100%;
+    min-height: 500px;
     overflow-y: scroll;
 }
 
@@ -205,6 +239,7 @@ section[name="list"] {
 .list-item-quantity {
     font-size: 18px;
     font-style: italic;
+    padding-bottom: 5px;
 }
 
 .name-word {
@@ -219,4 +254,50 @@ section[name="list"] {
     font-size: 30px;*/
     float: right;
     line-height: 40px;
+}
+
+#quantity-alert-container {
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    color: white;
+    top: 100px;
+    display: none;
+}
+
+#quantity-alert {
+    position: relative;
+    margin: auto;
+    background: #4DB6AC;
+    box-shadow: 5px 5px 10px #616161;
+    width: 500px;
+    padding: 20px;
+}
+
+#quantity-alert p {
+    font-size: 30px;
+    text-align: center;
+}
+
+#quantity-alert input {
+    color: black;
+    text-align: center;
+    height: 35px;
+    font-size: 24px;
+}
+
+.alert-button {
+    border: 2px solid white;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 20px;
+}
+
+.alert-button:hover {
+    color: #4DB6AC;
+    background: white;
+}
+
+.add-button {
+    margin-left: 10px;
 }

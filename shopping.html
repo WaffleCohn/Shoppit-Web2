@@ -5,6 +5,8 @@
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="shopping.css" />
+
+        <script type="text/javascript" src="shopping.js"></script>
     </head>
 
     <body>
@@ -51,11 +53,27 @@
 
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-1">
+                    <h3 id="list-header">Add Items</h3>
+
                     <form id="search-form">
                         <p id="search-container">
-                            <input type="text" name="search" />
+                            <input type="text" name="search" placeholder="search..." />
                             <button>Search</button>
                         </p>
+
+                        <div class="line"></div>
+
+                        <div id="search-results">
+                            <div class="item" onclick="add(this);">
+                                <p>Strawberries</p>
+                            </div>
+                            <div class="item" onclick="add(this);">
+                                <p>Bananas</p>
+                            </div>
+                            <div class="item" onclick="add(this);">
+                                <p>iPhone</p>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
@@ -111,5 +129,33 @@
                 </div>
             </div>
         </section>
+
+        <div id="quantity-alert-container">
+            <div id="quantity-alert">
+                <p>How many would you like?</p>
+                <p><input type="text" name="quantity" onkeypress="return onlyNums(event, this);" /></p>
+                <p>
+                    <button class="alert-button cancel-button" onclick="cancel()">Cancel</button>
+                    <button class="alert-button add-button" onclick="addItem()">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var list = document.getElementById("list"),
+                search = document.getElementById("search-form");
+
+            search.style.height = list.offsetHeight + "px";
+
+            function onlyNums(e, obj)
+			{
+				var charCode = e ? e.charCode : event.charCode;
+
+                if (obj.value.length > 3)
+                    return false;
+
+				return charCode >= 48 && charCode <= 57
+			}
+        </script>
     </body>
 </html>
