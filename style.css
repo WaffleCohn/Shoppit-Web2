@@ -1,0 +1,129 @@
+html, body {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+header {
+    background: #009688;
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#right-links {
+    float: right;
+    height: 60px;
+}
+
+#right-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    line-height: 80px;
+    //border: 2px solid white;
+    padding: 10px;
+    padding-left: 15px;
+    //border-radius: 10px;
+    padding-right: 15px;
+}
+
+#right-links a:hover {
+    color: #BDBDBD;
+    text-decoration: none;
+    border-color: #BDBDBD;
+}
+
+section {
+    padding-bottom: 200px;
+}
+
+section[name="head"] {
+    background: #009688;
+    //padding-bottom: 50px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-size: 118px;
+    margin-top: 50px;
+}
+
+#catch-phrase {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+.head-button {
+    border: 2px solid white;//#CDDC39;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;//#CDDC39;
+    background: transparent;
+    margin-right: 30px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+.head-button:hover {
+    color: #009688;
+    background: white;
+    border-color: white;
+}
+
+section[name="one"] {
+    background: white;
+}
+
+#phone {
+    height: 740px;
+    width: 414px;
+    position: absolute;
+}
+
+.caption {
+    color: black;
+}
+
+.caption-head {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+
+/*.caption-head:before {
+    position: absolute;
+    content: '';
+    top: 190px;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}*/
+
+.caption-body {
+    font-size: 18px;
+}
+
+section[name="two"] {
+    background: #009688;
+}
+
+.alt-caption {
+    color: white;
+}

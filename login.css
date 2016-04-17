@@ -1,0 +1,92 @@
+html, body {
+    background: white;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif !important;
+}
+
+#main {
+    background: #009688;
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #BEBEBE;
+}
+
+#login-logo {
+    width: 75px;
+    height: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 40px;
+}
+
+#message {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 60px;
+}
+
+#login-form {
+    position: relative;
+    top: 60px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+    color: white;
+    font-size: 18px;
+}
+
+.login-head {
+    margin-top: 20px;
+}
+
+#login-form input {
+    color: black;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+}
+
+#login-form a {
+    color: #BEBEBE;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+#new-peoplez {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#login-form a:hover {
+    text-decoration: underline;
+}
+
+#submit-button {
+    text-align: center;
+    border: 2px solid white;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: transparent;
+    color: white !important;
+    height: 40px !important;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+#submit-button:hover {
+    background: white;
+    color: #009688 !important;
+}
