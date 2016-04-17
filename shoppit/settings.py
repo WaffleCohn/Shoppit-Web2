@@ -37,7 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'thelist',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -101,3 +103,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# https://django-extensions.readthedocs.org/en/latest/shell_plus.html
+SHELL_PLUS_PRE_IMPORTS = (
+    ('thelist.models', '*'),
+    'thelist.views',
+    'numpy',
+    'scipy',
+    'pandas'
+)
