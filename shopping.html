@@ -3,10 +3,113 @@
     <head>
         <title>My shoppit</title>
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="shopping.css" />
     </head>
 
     <body>
-        
+        <header>
+            <a href="">
+                <img src="logo_white.png" id="logo" />
+            </a>
+
+            <div id="right-links">
+                <a href="index.html">Logout</a>
+            </div>
+        </header>
+
+        <section name="header">
+            <img src="blank_profile.png" id="profile-pic" />
+            <p id="name">Jiaming "Fungus" Chen</p>
+        </section>
+
+        <section name="about">
+            <div id="about-content">
+                <h3 id="about-head">About</h3>
+                <p id="description">No description available</p>
+            </div>
+        </section>
+
+        <section name="list">
+            <!--<form id="list-form">
+                <p id="search-container"><input type="text" name="search" /></p>
+                <div id="search-results">
+                    <div class="item">
+                        <p>Apple</p>
+                    </div>
+                    <div class="item">
+                        <p>Orange</p>
+                    </div>
+                    <div class="item">
+                        <p>Box of Chocolate Rabbits</p>
+                    </div>
+                    <div class="item">
+                        <p>Fungus</p>
+                    </div>
+                </div>
+            </form>-->
+
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-1">
+                    <form id="search-form">
+                        <p id="search-container">
+                            <input type="text" name="search" />
+                            <button>Search</button>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="col-sm-6">
+                    <div id="list-container">
+                        <h3 id="list-header">My Grocery List</h3>
+
+                        <div id="list">
+                            <div class="list-item">
+                                <p class="list-item-name">
+                                    <span class="name-word">Fungus</span>
+                                    <i class="fa fa-clock-o symbol" aria-hidden="true"></i>
+                                </p>
+                                <p class="list-item-quantity">Quantity: 5</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">
+                                    <span class="name-word">Gummy Bears</span>
+                                    <i class="fa fa-car symbol" aria-hidden="true"></i>
+                                </p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Chicken</p>
+                                <p class="list-item-quantity">Quantity: 10</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Apartment Building</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Birthday Cake</p>
+                                <p class="list-item-quantity">Quantity: 2</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Pants</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Chocolate Bars</p>
+                                <p class="list-item-quantity">Quantity: 100</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Gum</p>
+                                <p class="list-item-quantity">Quantity: 1</p>
+                            </div>
+                            <div class="list-item">
+                                <p class="list-item-name">Friends</p>
+                                <p class="list-item-quantity">Quantity: 0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
