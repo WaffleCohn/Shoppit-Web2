@@ -103,6 +103,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, "thelist/static") ]
 
 # https://django-extensions.readthedocs.org/en/latest/shell_plus.html
 SHELL_PLUS_PRE_IMPORTS = (
