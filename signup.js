@@ -7,7 +7,7 @@ function nextt(obj)
     {
         step++;
 
-        if (step < numSteps)
+        if (step <= numSteps)
         {
             var currentStep = document.getElementById("step" + (step-1)),
                 nextStep = document.getElementById("step" + step);
@@ -19,7 +19,7 @@ function nextt(obj)
             previousButton.className = "nav-button";
         }
 
-        if (step >= numSteps-1)
+        if (step > numSteps-1)
         {
             var nextButton = document.getElementById("next");
             nextButton.className += " disabled";

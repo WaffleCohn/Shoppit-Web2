@@ -58,6 +58,39 @@ html, body {
     font-size: 20px;
 }
 
+.halfInput {
+    width: 47% !important;
+    margin-right: 6%;
+}
+
+.halfInput2 {
+    width: 47% !important;
+}
+
+.short {
+    width: 50px !important;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.short2 {
+    width: 50px !important;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.upload {
+    color: white !important;
+    font-size: 15px !important;
+    line-height: 0px;
+}
+
+.multi-line {
+    color: black;
+    width: 100%;
+    resize: none;
+}
+
 #login-form a {
     color: #BEBEBE;
     text-decoration: none;
@@ -120,4 +153,20 @@ html, body {
 #next {
     position: relative;
     left: 120px;
+}
+
+#step1 {
+    display: block;
+}
+
+#step2 {
+    display: none;
+}
+
+#step3 {
+    display: none;
+}
+
+#step4 {
+    display: none;
 }
