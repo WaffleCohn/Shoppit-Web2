@@ -19,6 +19,8 @@ urlpatterns = [
     # url(r'get_transaction/?', views.get_transactions_all),
     # url(r'get_transaction/id/(?P<id>[0-9]+)$', views.get_transaction_id),
     # url(r'get_transaction/owner/(?P<username>[A-Za-z0-9]+)$', views.get_transactions_owner),
+    url(r'^register', views.register_account),
+    url(r'^nearest_items/(?P<lat>)/(?P<lon>)', views.nearest_items),
     url(r'^', include(router.urls)),
     url(r'^items/by_owner/(?P<username>.+)/?$',views.ItemList.as_view()),
     url(r'^transaction/by_owner/(?P<username>.+)/?$',views.TransactionList.as_view()),

@@ -58,57 +58,18 @@ class TransactionList(generics.ListAPIView):
         # print(profile)
         return Transaction.objects.filter(owner=profile)
 
-# @api_view(['GET'])
-# def get_user(request, username):
-    # if request.method == "GET":
-        # profile = User.objects.get(username=username).profile
-        # serializer = ProfileSerializer(profile)
-        # # print(serializer.data)
-        # return Response(serializer.data)
-
-# @api_view(['GET'])
-# def get_items_all(request):
-    # if request.method == "GET":
-        # serializer = ItemSerializer(Item.objects.all(), many=True)
-        # return Response(serializer.data)
-
-# @api_view(['GET'])
-# def get_item_id(request, id):
-    # if request.method == "GET":
-        # item = Item.objects.get(id=id)
-        # serializer = ItemSerializer(item)
-        # return Response(serializer.data)
+# untested
+@api_view(['POST'])
+def register_account(request):
+    username = request.POST.get('username','')
+    email = request.POST.get('email','')
+    password = request.POST.get('password',None)
+    create_profile(username, email, password=password)
 
 # untested
 @api_view(['GET'])
-def get_items_owner(request, username):
-    if request.method == "GET":
-        profile = User.objects.get(username=username).profile
-        items = Item.objects.filter(owner=profile)
-        serializer = ItemSerializer(items, many=True)
-        return Response(serializer.data)
-
-# @api_view(['GET'])
-# def get_transactions_all(request):
-    # if request.method == "GET":
-        # serializer = TransactionSerializer(Transaction.objects.all(), many=True)
-        # return Response(serializer.data)
-
-# @api_view(['GET'])
-# def get_transaction_id(request, id):
-    # if request.method == "GET":
-        # transaction = Transaction.objects.get(id=id)
-        # serializer = TransactionSerializer(item)
-        # return Response(serializer.data)
-
-# untested
-@api_view(['GET'])
-def get_transactions_owner(request, username):
-    if request.method == "GET":
-        profile = User.objects.get(username=username).profile
-        transactions = Transaction.objects.filter(owner=profile)
-        serializer = TransactionSerializer(transactions, many=True)
-        return Response(serializer.data)
+def nearest_items(request,lat,lon):
+    return HttpResponse(items_in_radius([lat,lon]))
 
 # calculate distance from 'x' to a list of points
 # from: https://stackoverflow.com/a/6659808
