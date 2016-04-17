@@ -15,14 +15,21 @@ function nextt(obj)
             currentStep.style.display = "none";
             nextStep.style.display = "block";
 
-            var previousButton = document.getElementById("previous");
+            var previousButton = document.getElementById("previous"),
+                submitButton = document.getElementById("submit-button");
+
             previousButton.className = "nav-button";
+            submitButton.style.display = "none";
         }
 
         if (step > numSteps-1)
         {
-            var nextButton = document.getElementById("next");
+            var nextButton = document.getElementById("next"),
+                submitButton = document.getElementById("submit-button");
+
             nextButton.className += " disabled";
+
+            submitButton.style.display = "block";
         }
     }
 }
@@ -41,8 +48,11 @@ function previous(obj)
             currentStep.style.display = "none";
             prevStep.style.display = "block";
 
-            var nextButton = document.getElementById("next");
+            var nextButton = document.getElementById("next"),
+                submitButton = document.getElementById("submit-button");
+
             nextButton.className = "nav-button";
+            submitButton.style.display = "none";
         }
 
         if (step <= 1)
