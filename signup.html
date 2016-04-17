@@ -4,9 +4,40 @@
         <title>shoppit | sign up</title>
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="signup.css" />
+
+        <script type="text/javascript" src="signup.js"></script>
     </head>
 
     <body>
-        
+        <div id="main">
+            <a href="index.html">
+                <img src="logo_white.png" id="logo" />
+            </a>
+            <p id="message">Join shoppit today</p>
+
+            <form id="login-form">
+                <div id="step1">
+                    <p class="login-head">Email address</p>
+                    <p><input type="text" name="email" /></p>
+
+                    <p class="login-head">Password</p>
+                    <p><input type="password" name="password" /></p>
+
+                    <p class="login-head">Confirm Password</p>
+                    <p><input type="password" name="confirm-password" /></p>
+                </div>
+
+                <div id="step2">
+
+                </div>
+
+                <div id="nav-buttons">
+                    <span class="nav-button disabled" id="previous" onclick="previous(this);">Previous</span>
+                    <span class="nav-button" id="next" onclick="nextt(this);">Next</span>
+                </div>
+
+                <p><input type="submit" value="Sign Up" id="submit-button" /></p>
+            </form>
+        </div>
     </body>
 </html>

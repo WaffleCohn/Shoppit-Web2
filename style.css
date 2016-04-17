@@ -78,7 +78,7 @@ section[name="head"] {
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    transition: all 0.3s ease 0s;
+    transition: background 0.3s ease;
 }
 
 .head-button:hover {

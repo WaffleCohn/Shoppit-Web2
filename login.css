@@ -61,7 +61,7 @@ html, body {
 #login-form a {
     color: #BEBEBE;
     text-decoration: none;
-    transition: all 0.3s ease 0s;
+    transition: background 0.3s ease;
 }
 
 #new-peoplez {
