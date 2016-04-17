@@ -69,8 +69,12 @@ def register_account(request):
 
 # untested
 @api_view(['GET'])
-def nearest_items(request,lat,lon):
-    return HttpResponse(items_in_radius([lat,lon]))
+def nearest_items(request):
+    lat = float(request.GET.get('lat'))
+    lon = float(request.GET.get('lon'))
+    print(lat,lon)
+    return HttpResponse(map(lambda x: ItemSerializer(x[0]).data, items_in_radius([lat,lon],100)))
+
 
 # calculate distance from 'x' to a list of points
 # from: https://stackoverflow.com/a/6659808
