@@ -23,6 +23,7 @@ html, body {
     margin-right: auto;
     position: relative;
     top: 40px;
+    cursor: pointer;
 }
 
 #message {
