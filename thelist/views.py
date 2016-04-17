@@ -63,8 +63,9 @@ class TransactionList(generics.ListAPIView):
 def register_account(request):
     username = request.POST.get('username','')
     email = request.POST.get('email','')
-    password = request.POST.get('password',None)
+    password = request.POST.get('password',"")
     create_profile(username, email, password=password)
+    return HttpResponse()
 
 # untested
 @api_view(['GET'])
